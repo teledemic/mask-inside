@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -6,18 +6,16 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  @ViewChild('video1') video1; 
-  @ViewChild('video2') video2; 
-  stream: MediaStream;
+  yes = new Audio("assets/sound/yes.wav");
+  no = new Audio("assets/sound/no.mp3");
 
   constructor(public navCtrl: NavController) {
 
   }
 
   async ionViewDidLoad() {
-    this.stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
-    this.video1.nativeElement.srcObject = this.stream;
-    this.video2.nativeElement.srcObject = this.stream;
+    this.yes.play();
+    this.no.play();
   }
 
 }
