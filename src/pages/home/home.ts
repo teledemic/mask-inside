@@ -45,7 +45,7 @@ export class HomePage {
   hookupSocket() {
     try {
       this.error = "opening";
-      this.sock = socketio("http://192.168.2.107:8080");
+      this.sock = socketio("http://192.168.2.100:8080");
       this.sock.on("sound", msg => {
         this.error = msg;
         this.nativeAudio.play(msg).catch(err => {
