@@ -1,22 +1,8 @@
-video {
-  height: 100%;
-  width: 100%;
-  filter: hue-rotate(180deg);
+.message {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
 }
-#video1 {
-  background-color: blue;
-}
-#video2 {
-  background-color: red;
-}
-.grid {
-  padding: 0;
-  height: 100%;
-}
-.row {
-  height: 100%;
-}
-.col {
-  height: 100%;
-  padding: 0;
+.content {
+  background-color: black;
 }
