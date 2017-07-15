@@ -41,6 +41,22 @@ export class HomePage {
           this.sounds[msg].play();
         }
       });
+      this.sock.on("connect", msg => {
+        this.error = "Connected";
+        this.message = msg;
+      });
+      this.sock.on("connect_failed", msg => {
+        this.error = "connect_failed";
+        this.message = msg;
+      });
+      this.sock.on("reconnect_failed", msg => {
+        this.error = "reconnect_failed";
+        this.message = msg;
+      });
+      this.sock.on("error", msg => {
+        this.error = "error";
+        this.message = msg;
+      });
     } catch (err) {
       this.message = err;
     }
