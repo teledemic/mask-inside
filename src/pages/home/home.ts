@@ -10,10 +10,18 @@ export class HomePage {
   message = "";
   error = "";
   sounds = {
-    yes: new Audio("assets/sound/yes.mp3"),
-    no: new Audio("assets/sound/no.mp3"),
-    ding: new Audio("assets/sound/ding.mp3"),
-    bell: new Audio("assets/sound/bell.mp3"),
+    yes_center: new Audio("assets/sound/yes_center.ogg"),
+    yes_left: new Audio("assets/sound/yes_left.ogg"),
+    yes_right: new Audio("assets/sound/yes_right.ogg"),
+    no_center: new Audio("assets/sound/no_center.ogg"),
+    no_left: new Audio("assets/sound/no_left.ogg"),
+    no_right: new Audio("assets/sound/no_right.ogg"),
+    ding_center: new Audio("assets/sound/ding_center.ogg"),
+    ding_left: new Audio("assets/sound/ding_left.ogg"),
+    ding_right: new Audio("assets/sound/ding_right.ogg"),
+    bell_center: new Audio("assets/sound/bell_center.ogg"),
+    bell_left: new Audio("assets/sound/bell_left.ogg"),
+    bell_right: new Audio("assets/sound/bell_right.ogg"),
   }
   sock: any;
 
